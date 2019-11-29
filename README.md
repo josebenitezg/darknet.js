@@ -1,73 +1,32 @@
 # Darknet.JS
+Basado en el repositorio de https://github.com/bennetthardwick/darknet.js
 
-
-## Prerequisites
-- Linux, Mac, Windows (Linux sub-system),
-- Node
-- Build tools (make, gcc, etc.)
-
-## Examples
-To run the examples, run the following commands:
-```sh
-# Clone the repositorys
-git clone https://github.com/bennetthardwick/darknet.js.git darknet && cd darknet
-# Install dependencies and build Darknet
-npm install
-# Compile Darknet.js library
-npx tsc
-# Run examples
-./examples/example
-```
-Note: The example weights are quite large, the download might take some time
-
-## Installation
+## Instalación
 You can install darknet with npm using the following command:
 ```
-npm install darknet
+npm install intuitivo_cv
 ```
-If you'd like to enable CUDA and/or CUDANN, export the flags `DARKNET_BUILD_WITH_GPU=1` for CUDA, and `DARKNET_BUILD_WITH_CUDNN=1` for CUDANN, and rebuild:
+Si deseamos incorporar GPU y CuDNN...
 ```
 export DARKNET_BUILD_WITH_GPU=1
 export DARKNET_BUILD_WITH_CUDNN=1
 npm rebuild darknet
 ```
 
-You can enable OpenMP by also exporting the flag `DARKNET_BUILD_WITH_OPENMP=1`;
 
-## Usage
-To create an instance of darknet.js, you need a three things. The trained weights, the configuration file they were trained with and a list of the names of all the classes.
+## Modo de uso
+
 ```typescript
-import { Darknet } from 'darknet';
+  GNU nano 2.5.3                                            File: prueba.js                                                                                                
 
-// Init
-let darknet = new Darknet({
-    weights: './cats.weights',
-    config: './cats.cfg',
-    names: [ 'dog', 'cat' ]
-});
-
-// Detect
-console.log(darknet.detect('/image/of/a/dog.jpg'));
-```
-
-In conjuction with [opencv4nodejs](https://github.com/justadudewhohacks/opencv4nodejs), Darknet.js can also be used to detect objects inside videos.
-```javascript
-const fs = require('fs');
-const cv = require('opencv4nodejs');
-const { Darknet } = require('darknet');
-
+const { Darknet } = require('intuitivo_cv');
+ 
 const darknet = new Darknet({
-  weights: 'yolov3.weights',
-  config: 'cfg/yolov3.cfg',
-  namefile: 'data/coco.names'
+  weights: '/home/ubuntu/darknet/data_train/models/yolov3-gondolas_final.weights',
+  config: '/home/ubuntu/vending-fridge-api/configuracion.cfg',
+  namefile: '/home/ubuntu/darknet/data_train/data/gondolas.names'
+
 });
-
-const cap = new cv.VideoCapture('video.mp4');
-
-let frame;
-let index = 0;
-do {
-  frame = cap.read().cvtColor(cv.COLOR_BGR2RGB);
-  console.log(darknet.detect(frame));
-} while(!frame.empty);
+console.log(darknet.detect('/home/ubuntu/darknet/data_train/prueba.png'));
+console.log(darknet.detect('/home/ubuntu/vending-fridge-api/pizza.png'));
 ```
