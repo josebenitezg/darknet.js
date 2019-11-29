@@ -2,7 +2,7 @@
 Basado en el repositorio de https://github.com/bennetthardwick/darknet.js
 
 ## Instalación
-You can install darknet with npm using the following command:
+Instalar con npm desde el command:
 ```
 npm install intuitivo_cv
 ```
