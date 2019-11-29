@@ -1,10 +1,13 @@
 {
-  "name": "darknet_intuitivo",
+  "name": "darknet",
   "version": "2.0.5",
-  "description": "",
+  "description": "for intuitivo only",
   "main": "darknet.js",
   "typings": "darknet.d.ts",
-  "repository": "https://github.com/joseware/darknet.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/joseware/darknet.js.git"
+  },
   "homepage": "https://github.com/joseware/darknet.js",
   "scripts": {
     "build": "./install-script.sh && node-gyp rebuild",
@@ -32,5 +35,12 @@
     "@types/node": "^12.6.2",
     "jasmine": "^3.1.0",
     "typescript": "^3.5.3"
+  },
+  "bugs": {
+    "url": "https://github.com/joseware/darknet.js/issues"
+  },
+  "directories": {
+    "example": "examples",
+    "lib": "lib"
   }
 }
