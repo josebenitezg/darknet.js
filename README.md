@@ -6,12 +6,6 @@ Instalar con npm desde el command:
 ```
 npm install intuitivo_cv
 ```
-Si deseamos incorporar GPU y CuDNN...
-```
-export DARKNET_BUILD_WITH_GPU=1
-export DARKNET_BUILD_WITH_CUDNN=1
-npm rebuild darknet
-```
 
 
 ## Modo de uso

@@ -6,7 +6,7 @@
     },
 
     "targets": [{
-        "target_name": "darknet_intuitivo",
+        "target_name": "darknet",
         "cflags!": [ "-fno-exceptions" ],
         "cflags_cc!": [ "-fno-exceptions" ],
 

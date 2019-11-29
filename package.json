@@ -1,6 +1,6 @@
 {
-  "name": "darknet",
-  "version": "2.0.5",
+  "name": "intuitivo_cv",
+  "version": "1.0.0",
   "description": "for intuitivo only",
   "main": "darknet.js",
   "typings": "darknet.d.ts",
