@@ -43,10 +43,10 @@
         ],
         'include_dirs': [
             "<!@(node -p \"require('node-addon-api').include\")",
-            "darknet_intuitivo/include/",
+            "darknet/include/",
         ],
         'libraries': [
-            "../darknet_intuitivo/libdarknet.a",
+            "../darknet/libdarknet.a",
         ],
         'dependencies': [
             "<!(node -p \"require('node-addon-api').gyp\")"

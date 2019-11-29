@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 if [ ! -d darknet ]; then
-    git clone https://github.com/joseware/darknet darknet_intuitivo;
+    git clone https://github.com/joseware/darknet;
 
     if [ $? -ne 0 ]; then
         echo "Could not clone darknet repo";
@@ -9,7 +9,7 @@ if [ ! -d darknet ]; then
 fi
 
 # dive in the darknet folder and make
-cd darknet_intuitivo
+cd darknet
 
 # look for exported variables for GPU and CUDNN
 GPU="${DARKNET_BUILD_WITH_GPU:-0}";
