@@ -1,5 +1,5 @@
 # Darknet.JS
-A Node wrapper of pjreddie's open source neural network framework Darknet, using the Foreign Function Interface Library. Read: YOLOv3 in JavaScript.
+
 
 ## Prerequisites
 - Linux, Mac, Windows (Linux sub-system),
@@ -71,14 +71,3 @@ do {
   console.log(darknet.detect(frame));
 } while(!frame.empty);
 ```
-
-### Example Configuration
-You can download pre-trained weights and configuration from pjreddie's website. The latest version (yolov3-tiny) is linked below: 
-- [weights](https://pjreddie.com/media/files/yolov3-tiny.weights)
-- [config](https://github.com/pjreddie/darknet/blob/master/cfg/yolov3-tiny.cfg)
-- [names](https://raw.githubusercontent.com/pjreddie/darknet/master/data/coco.names)
-
-If you don't want to download that stuff manually, navigate to the `examples` directory and issue the `./example` command. This will download the necessary files and run some detections.
-
-## Built-With
-- [Darknet](https://github.com/pjreddie/darknet)

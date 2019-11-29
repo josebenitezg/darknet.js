@@ -4,8 +4,8 @@
   "description": "",
   "main": "darknet.js",
   "typings": "darknet.d.ts",
-  "repository": "https://github.com/bennetthardwick/darknet.js",
-  "homepage": "https://github.com/bennetthardwick/darknet.js",
+  "repository": "https://github.com/joseware/darknet.js",
+  "homepage": "https://github.com/joseware/darknet.js",
   "scripts": {
     "build": "./install-script.sh && node-gyp rebuild",
     "clean": "node-gyp clean",
