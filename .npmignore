@@ -1,7 +1,7 @@
 lib/
 examples/
 build/
-darknet/
+darknet_intuitivo/
 libdarknet*
 tsconfig.json
 .ccls-cache/
